@@ -5,11 +5,14 @@ fn main() {
     println!("A metade é: {:?}", metade(&vetor));
 }
 
-fn metade(vetor: &Vec<i32>) -> &[i32] {
-    let meio = vetor.len()/2 + 1;
+fn metade(vetor: &Vec<i32>) -> Vec<i32> {
+    let meio = vetor.len() / 2 + 1;
     let mut metade = Vec::new();
-    for i in 0..meio {
-        metade.push(vetor[i]);
+    {
+        let metade_ref = &mut metade;
+        for i in 0..meio {
+            metade_ref.push(vetor[i]);
+        }
     }
-    &metade
+    metade
 }
