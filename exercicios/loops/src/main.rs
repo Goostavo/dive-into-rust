@@ -1,4 +1,4 @@
-fn main() { 
+fn main() {
     /* pode deixar vazio */
 }
 
@@ -7,7 +7,7 @@ fn main() {
 ///     Se x é ímpar, faça x igual a 3x + 1 e repita.
 /// Retorne quantas vezes é necessário repetir o processo até que x = 1.
 fn collatz(mut x: u32) -> u32 {
-    let mut iteractions : u32 = 0;
+    let mut iteractions: u32 = 0;
 
     while x != 1 {
         iteractions += 1;
@@ -19,7 +19,6 @@ fn collatz(mut x: u32) -> u32 {
     }
     iteractions
 }
-
 
 // Testes
 
