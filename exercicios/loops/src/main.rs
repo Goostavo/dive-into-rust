@@ -8,8 +8,8 @@ fn main() {
 /// Retorne quantas vezes é necessário repetir o processo até que x = 1.
 fn collatz(mut x: u32) -> u32 {
     let mut iteractions : u32 = 0;
-  
-    while x != 1{
+
+    while x != 1 {
         iteractions += 1;
         if x % 2 == 0 {
             x /= 2;
